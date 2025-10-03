@@ -14,10 +14,14 @@
   <h1>Accesibilidad Ejemplos mal</h1>
 
   <h1>Elementos repetitivos - Ejemplo mal</h1>
-
+  <nav>
+    <a href="#salto">
+      <h3>Saltar al contenido</h3>
+    </a>
+  </nav>
   <nav>
     <ul>
-      <li><a href="#">menu 1</a>
+      <li><a href="#" >menu 1</a>
         <ul>
           <li><a href="#">submenu 1.1</a></li>
           <li><a href="#">submenu 1.2</a></li>
@@ -36,71 +40,76 @@
 </div>
   <hr />
 
-  <h2>Formularios - Ejemplo mal</h2>
+  <h2 id="salto">Formularios - Ejemplo mal</h2>
 
   <form method="post" action="#">
-    <p>
-      <strong>Información personal</strong>
-    </p>
-    <p>
-      <label for="nombre">Nombre:</label>
-      <input type="text" id="nombre" required />
-    </p>
-    <p>
-      <label for="mail">Correo electrónico:</label>
-      <input type="email" id="mail" required />
-    </p>
-    <p>
-      <label for="enlace">Página personal:</label>
-      <input type="url" id="enlace" placeholder="URL de tu página web personal" />
-    </p>
+    <fieldset>
 
-    <p><strong>Otra información</strong></p>
-    
-    <p>
-      <label for="fecha">Fecha:</label>
-      <input type="date" id="fecha" />
-    </p>
-    <p>
-      <label for="mes">Mes:</label>
-      <input type="month" id="mes"/>
-    </p>
-    <p>
-      <label for="semana">Semana:</label>
-      <input type="week" id="semana"/>
-    </p>
-    <p>
-      <label for="tiempo">Tiempo:</label>
-      <input type="time" id="tiempo"/>
-    </p>
-    <p>
-      <label for="fechatiempo">Fecha y tiempo:</label>
-      <input type="time" id="fechatiempo"/>
-    </p>
-    <p>
-      <label for="numero">Número (min -10, max 10):</label>
-      <input type="number" min="-10" max="10" value="0" id="numero" />
-    </p>
-    <p>
-      <label for="rango">Intervalo (min 0, max 10):</label>
-      <input type="range" id="rango" />
-    </p>
-    <p>
-      <label for="telefono">Teléfono:</label>
-      <input type="tel" id="telefono"/>
-    </p>
-    <p>
-      <label for="busqueda">Búsqueda:</label>
-      <input type="search" id="busqueda"/>
-    </p>
-    <p>
-      <label for="color">Color Favorito:</label>
-      <input type="color" id="color"/>
-    </p>
-    
-    <p><strong>Controles</strong></p>
-    <input type="reset" value="Borrar" />
-    <input type="submit" value="Enviar" />
+      <fieldset>
+        <legend><strong>Información personal</strong></legend>
+        <p>
+          <label for="nombre">Nombre:</label>
+          <input type="text" id="nombre" required />
+        </p>
+        <p>
+          <label for="mail">Correo electrónico:</label>
+          <input type="email" id="mail" required />
+        </p>
+        <p>
+          <label for="enlace">Página personal:</label>
+          <input type="url" id="enlace" placeholder="URL de tu página web personal" />
+        </p>
+      </fieldset>
+      
+      <fieldset>
+        <legend><strong>Otra información</strong></legend>
+        <p>
+          <label for="fecha">Fecha:</label>
+          <input type="date" id="fecha" />
+        </p>
+        <p>
+          <label for="mes">Mes:</label>
+          <input type="month" id="mes"/>
+        </p>
+        <p>
+          <label for="semana">Semana:</label>
+          <input type="week" id="semana"/>
+        </p>
+        <p>
+          <label for="tiempo">Tiempo:</label>
+          <input type="time" id="tiempo"/>
+        </p>
+        <p>
+          <label for="fechatiempo">Fecha y tiempo:</label>
+          <input type="time" id="fechatiempo"/>
+        </p>
+        <p>
+          <label for="numero">Número (min -10, max 10):</label>
+          <input type="number" min="-10" max="10" value="0" id="numero" />
+        </p>
+        <p>
+          <label for="rango">Intervalo (min 0, max 10):</label>
+          <input type="range" id="rango" />
+        </p>
+        <p>
+          <label for="telefono">Teléfono:</label>
+          <input type="tel" id="telefono"/>
+        </p>
+        <p>
+          <label for="busqueda">Búsqueda:</label>
+          <input type="search" id="busqueda"/>
+        </p>
+        <p>
+          <label for="color">Color Favorito:</label>
+          <input type="color" id="color"/>
+        </p>
+        
+      </fieldset>
+      
+      <p><strong>Controles</strong></p>
+      <input type="reset" value="Borrar" />
+      <input type="submit" value="Enviar" />
+    </fieldset>
   </form>
 
   <hr />
@@ -166,36 +175,29 @@
 
   <h2>Organización - Ejemplo mal</h2>
 
-  <h3>Nombre de la empresa</h3>
-  <h3>Eslogan de la empresa</h3>
-
-  <table>
-  
-    <thead>
-      <th>Noticias</th>
-    </thead>
-    <tbody>
-      <tr>
-        <td><small><b>Noticia 1</b></small></td>
-      </tr>
-      <tr>
-        <td><small>Desarrollo de la noticia 1</small></td>
-      </tr>
-      <tr>
-        <td><small><b>Noticia 2</b></small></td>
-      </tr>
-      <tr>
-        <td><small>Desarrollo de la noticia 2</small></td>
-      </tr>
-    </tbody>
-  </table>
+  <header>
+    <h1>Nombre de la empresa</h1>
+    <h2 id="eslogan">Eslogan de la empresa</h2>
+  </header>
+  <section>
+    <h2>Noticias</h2>
+    <article>
+      <h3>Noticia 1</h3>
+        <p>Desarrollo de la noticia 1</p>
+    </article>
+    <article>
+      <h3>Noticia 2</h3>
+        <p>Desarrollo de la noticia 2</p>
+    </article>
+  </section>  
 
   <hr />
 
   <h2>Diagramas - Ejemplo mal</h2>
 
-  <img src="./img/disenio-centrado-usuario.png" alt="Diagrama de Diseño Centrado en el Usuario">
-
+  <img src="./img/disenio-centrado-usuario.png" alt="Diagrama de Diseño Centrado en el Usuario" longdesc="#descripcion1">
+  <span id="descripcion1">El Diseño Centrado en el usuario tiene varias fases: planificación, diseño, prototipado, evaluación,
+  implementación y lanzamiento, mantenimiento y seguimiento</span>
   <hr />
 
   <h2>Tablas - Ejemplo mal</h2>
@@ -277,7 +279,7 @@
 
   <h2>WAI-ARIA - Botón que actualizar valor - Ejemplo mal</h2>
 
-  <button id="obtener-random" type="button" title="Obtener Random">Obtener Random</button>
+  <button id="obtener-random" type="button" title="Obtener-Random">Obtener Random</button>
   <span id="random">0</span>
 
   <hr />

@@ -52,6 +52,13 @@ a:active {
   position: relative;
 }
 
+span {
+  position: absolute;
+  left: -9999em;
+  width: 1px;
+  overflow: hidden;
+}
+
 /*=============================================
 =            Estilos para el scronly de los enlaces            =
 =============================================*/
@@ -79,8 +86,8 @@ a:active span.sronly:before {
 /*=====  End of Scronly de los enlaces  ======*/
 
 .importante {
-  background-color: #333;
-  color: #ccc;
+  background-color: black;
+  color: white;
 }
 .etiqueta {
   display: block;
