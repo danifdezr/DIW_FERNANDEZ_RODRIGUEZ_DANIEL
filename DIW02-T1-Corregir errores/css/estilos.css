@@ -52,7 +52,7 @@ a:active {
   position: relative;
 }
 
-span {
+#descripcion1{
   position: absolute;
   left: -9999em;
   width: 1px;
