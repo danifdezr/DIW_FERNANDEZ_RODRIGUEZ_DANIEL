@@ -10,36 +10,36 @@
 </head>
 
 <body>
-<div class="header">
-  <h1>Accesibilidad Ejemplos mal</h1>
+  <div class="header">
+    <h1>Accesibilidad Ejemplos mal</h1>
 
-  <h1>Elementos repetitivos - Ejemplo mal</h1>
-  <nav>
-    <a href="#salto">
-      <h3>Saltar al contenido</h3>
-    </a>
-  </nav>
-  <nav>
-    <ul>
-      <li><a href="#" >menu 1</a>
-        <ul>
-          <li><a href="#">submenu 1.1</a></li>
-          <li><a href="#">submenu 1.2</a></li>
-          <li><a href="#">submenu 1.3</a></li>
-        </ul>
-      </li>
-      <li><a href="#">menu 2</a>
-        <ul>
-          <li><a href="#">submenu 2.1</a></li>
-          <li><a href="#">submenu 2.2</a></li>
-          <li><a href="#">submenu 2.3</a></li>
-        </ul>
-      </li>
-    </ul>
-  </nav>
-</div>
+    <h1>Elementos repetitivos - Ejemplo mal</h1>
+    <nav>
+      <a href="#salto">
+        <h3>Saltar al contenido</h3>
+      </a>
+    </nav>
+    <nav>
+      <ul>
+        <li><a href="#">menu 1</a>
+          <ul>
+            <li><a href="#">submenu 1.1</a></li>
+            <li><a href="#">submenu 1.2</a></li>
+            <li><a href="#">submenu 1.3</a></li>
+          </ul>
+        </li>
+        <li><a href="#">menu 2</a>
+          <ul>
+            <li><a href="#">submenu 2.1</a></li>
+            <li><a href="#">submenu 2.2</a></li>
+            <li><a href="#">submenu 2.3</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </div>
   <hr />
-
+  <!-- NO QUIERO VER DIV SIN ROLE Y MUCHO MENOS BR Y HR-->
   <h2 id="salto">Formularios - Ejemplo mal</h2>
 
   <form method="post" action="#">
@@ -60,7 +60,7 @@
           <input type="url" id="enlace" placeholder="URL de tu página web personal" />
         </p>
       </fieldset>
-      
+
       <fieldset>
         <legend><strong>Otra información</strong></legend>
         <p>
@@ -69,19 +69,19 @@
         </p>
         <p>
           <label for="mes">Mes:</label>
-          <input type="month" id="mes"/>
+          <input type="month" id="mes" />
         </p>
         <p>
           <label for="semana">Semana:</label>
-          <input type="week" id="semana"/>
+          <input type="week" id="semana" />
         </p>
         <p>
           <label for="tiempo">Tiempo:</label>
-          <input type="time" id="tiempo"/>
+          <input type="time" id="tiempo" />
         </p>
         <p>
           <label for="fechatiempo">Fecha y tiempo:</label>
-          <input type="time" id="fechatiempo"/>
+          <input type="time" id="fechatiempo" />
         </p>
         <p>
           <label for="numero">Número (min -10, max 10):</label>
@@ -93,19 +93,19 @@
         </p>
         <p>
           <label for="telefono">Teléfono:</label>
-          <input type="tel" id="telefono"/>
+          <input type="tel" id="telefono" />
         </p>
         <p>
           <label for="busqueda">Búsqueda:</label>
-          <input type="search" id="busqueda"/>
+          <input type="search" id="busqueda" />
         </p>
         <p>
           <label for="color">Color Favorito:</label>
-          <input type="color" id="color"/>
+          <input type="color" id="color" />
         </p>
-        
+
       </fieldset>
-      
+
       <p><strong>Controles</strong></p>
       <input type="reset" value="Borrar" />
       <input type="submit" value="Enviar" />
@@ -137,16 +137,16 @@
   </p>
 
   <p>
-    <nav id="menu2">
-      <ul class="">
-        <li><a href="">Únete</a></li>
-        <li><a href="">Equipo</a></li>
-        <li><a href="">Contacto</a></li>
-        <li><a href="">Síguenos</a></li>
-      </ul>
-    </nav>
-  </p>  
-    
+  <nav id="menu2">
+    <ul class="">
+      <li><a href="">Únete</a></li>
+      <li><a href="">Equipo</a></li>
+      <li><a href="">Contacto</a></li>
+      <li><a href="">Síguenos</a></li>
+    </ul>
+  </nav>
+  </p>
+
 
   <p>Teléfono de contacto: <a tlf="999123456">999123456</a></p>
 
@@ -183,21 +183,23 @@
     <h2>Noticias</h2>
     <article>
       <h3>Noticia 1</h3>
-        <p>Desarrollo de la noticia 1</p>
+      <p>Desarrollo de la noticia 1</p>
     </article>
     <article>
       <h3>Noticia 2</h3>
-        <p>Desarrollo de la noticia 2</p>
+      <p>Desarrollo de la noticia 2</p>
     </article>
-  </section>  
+  </section>
 
   <hr />
 
   <h2>Diagramas - Ejemplo mal</h2>
 
-  <img src="./img/disenio-centrado-usuario.png" alt="Diagrama de Diseño Centrado en el Usuario" longdesc="#descripcion1">
-  <span id="descripcion1">El Diseño Centrado en el usuario tiene varias fases: planificación, diseño, prototipado, evaluación,
-  implementación y lanzamiento, mantenimiento y seguimiento</span>
+  <img src="./img/disenio-centrado-usuario.png" alt="Diagrama de Diseño Centrado en el Usuario"
+    longdesc="#descripcion1">
+  <span id="descripcion1">El Diseño Centrado en el usuario tiene varias fases: planificación, diseño, prototipado,
+    evaluación,
+    implementación y lanzamiento, mantenimiento y seguimiento</span>
   <hr />
 
   <h2>Tablas - Ejemplo mal</h2>
@@ -211,7 +213,7 @@
       <th><strong>Jueves</strong></th>
       <th><strong>Viernes</strong></th>
     </thead>
-    
+
     <tr>
       <td><strong>10:00</strong></td>
       <td>Matemáticas</td>

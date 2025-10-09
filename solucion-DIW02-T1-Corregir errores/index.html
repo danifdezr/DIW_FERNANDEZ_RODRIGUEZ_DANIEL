@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Accesibilidad Ejemplo bien</title>
+  <link rel="stylesheet" href="css/estilos.css">
+  <script src="lib/jquery.js" defer></script>
+  <script src="js/scripts.js" defer></script>
+  <link rel="stylesheet" href="css/estilos.css">
+  <script src="lib/jquery.js" defer></script>
+  <script src="js/scripts.js" defer></script>
+</head>
+
+<body>
+  <header class="header">
+    <h1 id="inicio">Accesibilidad Ejemplos bien</h1>
+    <h2>Elementos repetitivos - Ejemplo bien</h2>
+    <a class="sronly" href="#principal">Ir al contenido principal</a>
+    <nav>
+      <ul>
+        <li>
+          <a href="#">menu 1</a>
+          <ul>
+            <li><a href="#">submenu 1.1</a></li>
+            <li><a href="#">submenu 1.2</a></li>
+            <li><a href="#">submenu 1.3</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">menu 2</a>
+          <ul>
+            <li><a href="#">submenu 2.1</a></li>
+            <li><a href="#">submenu 2.2</a></li>
+            <li><a href="#">submenu 2.3</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <article id="principal">
+      <h2>Formularios - Ejemplo bien</h2>
+
+      <form name="contacto" method="post" action="#">
+        <fieldset>
+          <legend>Información personal</legend>
+          <p>
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre"
+              title="Nombre de pila. De 2 a 15 letras mayúsculas y minúsculas."
+              pattern="[A-Za-záéíóúàèìòùüÁÉÍÓÓÜçñÑ ]{2,15}" placeholder="María José" autofocus required>
+          </p>
+          <p>
+            <label for="correo">Correo Electrónico:</label>
+            <input type="email" id="correo" name="correo" placeholder="nombre@correo.com" required>
+          </p>
+          <p>
+            <label for="web">Página personal:</label>
+            <input type="url" id="web" name="web" pattern="http://mipagina.es"
+              placeholder="URL de tu página web personal">
+          </p>
+        </fieldset>
+        <fieldset>
+          <legend>Otra información</legend>
+          <p>
+            <label for="fecha">Fecha:</label>
+            <input type="date" id="fecha" name="fecha">
+          </p>
+          <p>
+            <label for="mes">Mes:</label>
+            <input type="month" id="mes" name="mes">
+          </p>
+          <p>
+            <label for="semana">Semana:</label>
+            <input type="week" id="semana" name="semana">
+          </p>
+          <p>
+            <label for="tiempo">Tiempo:</label>
+            <input type="time" id="tiempo" name="tiempo">
+          </p>
+          <p>
+            <label for="fechatiempo">Fecha y tiempo:</label>
+            <input type="datetime-local" id="fechatiempo" name="fechatiempo">
+          </p>
+          <p>
+            <label for="numero">Número (min -10, max 10):</label>
+            <input type="number" id="numero" name="numero" min="-10" max="10" value="0">
+          </p>
+          <p>
+            <label for="intervalo">Intervalo (min 0, max 10):</label>
+            <input type="range" id="intervalo" name="intervalo">
+            <output name="intervalo">0</output>
+          </p>
+          <p>
+            <label for="telefono">Teléfono:</label>
+            <input type="tel" id="telefono" name="telefono">
+          </p>
+          <p>
+            <label for="busqueda">Búsqueda:</label>
+            <input type="search" id="busqueda" name="busqueda">
+          </p>
+          <p>
+            <label for="color_favorito">Color Favorito:</label>
+            <input type="color" id="color_favorito" name="color_favorito">
+          </p>
+        </fieldset>
+        <fieldset>
+          <legend>Controles</legend>
+          <input id="borrar" type="reset" name="borrar" value="Borrar"><label for="borrar" hidden>Borrar</label>
+          <input id="enviar" type="submit" name="enviar" value="Enviar">
+        </fieldset>
+      </form>
+    </article>
+    <!--   <hr>
+ -->
+    <article>
+      <h2>Mapas de imágenes - Ejemplo bien</h2>
+      <figure>
+        <!-- <object data="img/mapa_sudamerica.jpg" type="image/jpg" usemap="#sudamerica"> -->
+        <img src="img/mapa_sudamerica.jpg" alt="Mapa de sudamérica" usemap="#sudamerica" id="mapasudamerica">
+        <map name="sudamerica" id="sudamerica">
+          <area target="_blank" alt="Brasil" title="Brasil" href="https://es.wikipedia.org/wiki/Brasil"
+            coords="86,158,109,133,111,96,138,99,168,73,168,88,178,100,201,90,214,90,222,78,230,95,218,113,230,115,232,106,265,117,309,133,327,145,322,169,306,193,304,225,297,248,276,257,289,254,253,266,251,277,253,295,235,317,227,324,200,307,219,284,212,274,211,264,192,252,191,237,191,228,187,217,177,214,171,201,150,190,134,176,143,185,122,177,107,180,106,171,97,169,88,164,90,139,94,146,100,139,110,131"
+            shape="poly">
+          <area target="_blank" title="Uruguay" href="https://es.wikipedia.org/wiki/Uruguay"
+            coords="202,309,231,326,225,342,211,337,200,334,200,321" shape="poly" alt="Uruguay">
+          <area target="_blank" alt="Argentina" title="Argentina" href="https://es.wikipedia.org/wiki/Argentina"
+            coords="136,255,153,260,161,252,173,265,195,278,191,286,209,288,199,305,199,318,202,338,211,352,205,364,189,369,186,379,171,380,177,387,179,398,180,404,171,415,182,427,173,443,177,452,167,449,151,441,147,425,148,404,134,386,132,356,135,334,122,317"
+            shape="poly">
+        </map>
+        <figcaption>Mapa de sudamerica</figcaption>
+        <!-- </object> -->
+
+      </figure>
+
+    </article>
+    <article>
+      <h2>Imágenes - Ejemplo bien</h2>
+
+      <p>
+        <a href="#"><img src="./img/flecha-izq.gif" alt="Anterior"></a>
+        <a href="#">Índice</a>
+        <a href="#"><img src="./img/flecha-der.gif" alt="Siguiente"></a>
+      </p>
+
+      <h3>Menu:</h3>
+      <nav id="menu2">
+        <ul>
+          <li><a href="#">Únete</a></li>
+          <li><a href="#">Equipo</a></li>
+          <li><a href="#">Contacto</a></li>
+          <li><a href="#">Síguenos</a></li>
+        </ul>
+      </nav>
+      <p>
+        Teléfono de contacto:
+        <a href="tel:+34999123456">999123456</a>
+      </p>
+    </article>
+
+    <article>
+      <h2>Enlaces - Ejemplo bien</h2>
+
+      <section>
+        <h3>A mi hija mayor se le ha caido su primer diente</h3>
+
+        <p>
+          Estabamos desayunando cuando de repente sucedió.
+          <a href="#">Más información<span class="sronly">
+              Sobre la noticia titulada "A mi hija mayor se le ha caido su
+              primer diente"</span>.</a>
+        </p>
+      </section>
+
+      <section>
+        <h3>A mi hija pequeña le ha salido su primera muela</h3>
+
+        <p>
+          Después de comer, la pequeña dijo que le molestaba la boca.
+          <a href="#" aria-label="Información">Más información<span class="sronly">
+              sobre la noticia titulada "A mi hija pequeña le ha salido su
+              primera muela"</span>.</a>
+        </p>
+      </section>
+    </article>
+    <article>
+      <h2>Organización - Ejemplo bien</h2>
+      <section>
+        <header>
+          <h3>Nombre de la empresa</h3>
+          <p>Eslogan de la empresa</p>
+        </header>
+        <section id="news-list">
+          <h4>Noticias</h4>
+          <article>
+            <h5>Noticia 1</h5>
+            <p>Desarrollo de la noticia 1</p>
+          </article>
+          <article>
+            <h5>Noticia 2</h5>
+            <p>Desarrollo de la noticia 2</p>
+          </article>
+        </section>
+      </section>
+    </article>
+
+    <article>
+      <h2>Diagramas - Ejemplo bien</h2>
+      <figure>
+        <img src="./img/disenio-centrado-usuario.png" alt="Diagrama de Diseño Centrado en el Usuario"
+          aria-describedby="descripcion1">
+        <figcaption id="descripcion1" class="sronly">
+          <em>El Diseño Centrado en el usuario tiene varias fases:</em>
+          planificación, diseño, prototipado, evaluación, implementación y
+          lanzamiento, mantenimiento y seguimiento
+        </figcaption>
+      </figure>
+    </article>
+
+    <article>
+      <h2>Tablas - Ejemplo bien</h2>
+      <table aria-describedby="table-summary">
+        <caption>
+          Horario de clase
+          <p id="table-summary">
+            La primera columna son las horas y el resto de columnas los días de
+            la semana
+          </p>
+        </caption>
+        <thead>
+          <tr>
+            <th id="vacio" scope="col">Hora</th>
+            <th id="columnaLunes" scope="col">Lunes</th>
+            <th id="columnaMartes" scope="col">Martes</th>
+            <th id="columnaMiercoles" scope="col">Miércoles</th>
+            <th id="columnaJueves" scope="col">Jueves</th>
+            <th id="columnaViernes" scope="col">Viernes</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th id="filaHora10" scope="row">10:00</th>
+            <td headers="columnaLunes filaHora10">Matemáticas</td>
+            <td headers="columnaMartes filaHora10">Matemáticas</td>
+            <td headers="columnaMiercoles filaHora10">Matemáticas</td>
+            <td headers="columnaJueves filaHora10">Matemáticas</td>
+            <td headers="columnaViernes filaHora10">Matemáticas</td>
+          </tr>
+          <tr>
+            <th id="filaHora11" scope="row">11:00</th>
+            <td headers="columnaLunes filaHora11">Lengua</td>
+            <td headers="columnaMartes filaHora11">Lengua</td>
+            <td headers="columnaMiercoles filaHora11">Lengua</td>
+            <td headers="columnaJueves filaHora11">Lengua</td>
+            <td headers="columnaViernes filaHora11">Lengua</td>
+          </tr>
+          <tr>
+            <th id="filaHora12" scope="row">12:00</th>
+            <td headers="columnaLunes filaHora12">C.Sociales</td>
+            <td headers="columnaMartes filaHora12">C.Naturales</td>
+            <td headers="columnaMiercoles filaHora12">C.Sociales</td>
+            <td headers="columnaJueves filaHora12">C.Naturales</td>
+            <td headers="columnaViernes filaHora12">Deporte</td>
+          </tr>
+          <tr>
+            <th id="filaHora13" scope="row">13:00</th>
+            <td headers="columnaLunes filaHora13">Inglés</td>
+            <td headers="columnaMartes filaHora13">Inglés</td>
+            <td headers="columnaMiercoles filaHora13">Inglés</td>
+            <td headers="columnaJueves filaHora13">Inglés</td>
+            <td headers="columnaViernes filaHora13">Músic</td>
+          </tr>
+        </tbody>
+      </table>
+    </article>
+    <article>
+      <h2>Contraste - Ejemplo Bien</h2>
+      <p class="importante">Este texto es importante</p>
+    </article>
+
+    <article>
+      <h2>WAI-ARIA - Tooltips - Ejemplo bien</h2>
+      <form>
+        <fieldset>
+          <legend>Formulario de entrada</legend>
+          <p>
+            <label for="username" class="etiqueta">Usuario</label>
+            <input type="text" id="username" aria-describedby="username-tip" required>
+            <!-- A tooltipes una burbuja de texto contextual que muestra una descripción de un elemento que aparece cuando pasas el puntero del mouse o cuando se enfoca el teclado.-->
+            <span class="tooltip" role="tooltip" id="username-tip">
+              El usuario es tu email
+            </span>
+          </p>
+          <div>
+            <label for="password" class="etiqueta">Contraseña</label>
+            <input type="text" id="password" aria-describedby="password-tip" pattern="[A-Za-z\d$@$!%*?&]{8,15}"
+              required>
+            <div class="tooltip" role="tooltip" id="password-tip">
+              <p>Reglas de la contraseña:</p>
+              <ul>
+                <li>Mínimo 8 caracteres, máximo 15</li>
+                <li>Admite letras en mayúsculas, minúsculas, números y los caracteres especiales: &, @, !, $, %, *, ?
+                  y$.
+                </li>
+              </ul>
+            </div>
+          </div>
+          <input type="submit" name="enviar" value="Enviar">
+        </fieldset>
+      </form>
+    </article>
+
+    <article>
+      <h2>WAI-ARIA - Botón que actualiza valor - Ejemplo bien</h2>
+      <!--
+  aria-controls -> propiedad global identifica el elemento (o elementos) cuyo contenido o presencia está controlado por el elemento en el que se establece este atributo.
+  Se usa en botones o enlaces
+  En este caso relaciona el botón con con span de abajo que muestra un número aleatorio
+
+-->
+      <button id="obtener-random" type="button" title="Genera un random de números decimales" aria-controls="random">
+        Obtener Random
+      </button>
+      <span id="random" role="alert" aria-live="assertive">0</span>
+      <!--El aria-liveatributo global indica que un elemento se actualizará y describe los tipos de actualizaciones que los agentes de usuario.
+    Valores posibles
+  assertive
+Indica que las actualizaciones de la región tienen la máxima prioridad y deben presentarse al usuario de inmediato.
+
+off(por defecto)
+Indica que las actualizaciones de la región no deben presentarse al usuario a menos que el usuario esté actualmente centrado en esa región.
+
+polite
+Indica que las actualizaciones de la región deben presentarse en la próxima oportunidad adecuada, como al final de pronunciar la oración actual o cuando el usuario deja de escribir.
+
+-->
+    </article>
+    <article>
+      <h2>WAI-ARIA - Desplegables - Ejemplo bien</h2>
+
+      <button id="titulo-desplegable" aria-expanded="false" aria-controls="desplegable">
+        Despliegame
+      </button>
+      <div id="desplegable" class="hidden" aria-hidden="true">
+        <p>Aquí estoy... ^__^</p>
+      </div>
+      <!-- El atributo oculto se utiliza para ocultar el contenido a cualquier usuario. Utilice este atributo para definir el estado de visibilidad inicial del elemento. Este atributo se puede utilizar en el controlador y en el elemento de destino.
+
+El atributo aria-hidden se utiliza para ocultar el contenido del lector de pantalla pero aún está visible en la página.-->
+    </article>
+    <article>
+      <h2>WAI-ARIA - Tabs con keydown - Ejemplo bien</h2>
+      <!-- 
+  Role en este caso (tablist) identifica el elemento que sirve como contenedor para un conjunto de pestañas.
+  Podemos ver que tenemos 2 pestañas en este article a la que se accede desde un enlace que está vinculado con la pestaña con
+  aria-controls
+-->
+      <ul class="tablist" role="tablist">
+        <li role="presentation">
+          <a id="tab1" href="#section1" tabindex="0" class="tab selected" role="tab" aria-controls="section1"
+            aria-selected="true">Sección 1</a>
+        </li>
+        <li role="presentation">
+          <a id="tab2" href="#section2" tabindex="-1" class="tab" role="tab" aria-controls="section2">Sección 2</a>
+        </li>
+      </ul>
+      <div id="section1" class="tabpanel" role="tabpanel">
+        Este es el cuerpo de la sección UNO
+      </div>
+      <div id="section2" class="tabpanel hidden" role="tabpanel" aria-hidden="true">
+        Este es el cuerpo de la sección DOS
+      </div>
+    </article>
+  </main>
+</body>
+
+</html>
