@@ -1,0 +1,40 @@
+.flex{
+    display: flex;
+    gap: 1rem;
+}
+
+.item{
+    width: 200px;
+    height: 150px;
+    color: #fff;
+    text-align: center;
+    line-height: 150px;
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+    border: medium solid #666;
+    background-color: brown;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+#flex-container1 div:nth-child(even), #flex-container2 div:nth-child(even), #flex-container3 div:nth-child(even), #flex-container4 div:nth-child(even){
+    height: 100px;
+}
+
+#flex-container1{
+    align-items: stretch;
+}
+#flex-container2{
+    align-items: flex-start;
+}
+#flex-container3{
+    align-items: flex-end;
+}
+#flex-container4{   
+    align-items: center;
+}
+#flex-container5{
+    align-items: baseline;
+}
