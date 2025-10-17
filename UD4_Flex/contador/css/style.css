@@ -25,6 +25,16 @@ body{
     display: flex;
     flex-direction: column;
     background-color: var(--color-fondo-pagina);
+    color: var(--color-letra-1);
+}
+
+h1{
+    font-size: 4rem;
+}
+
+h1, h2, h3, h4{
+    font-family: var(--ff-primaria);
+    letter-spacing: var(--spacing);
 }
 
 
@@ -45,6 +55,35 @@ main{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+#valor {
+    font-size: 7rem;
+}
+
+.btn{
+    text-transform: uppercase;
+    padding: .375rem .75rem;
+    color: var(--color-letra-3);
+    letter-spacing: .1rem;
+    border: 2px solid var(--color-letra-3);
+    border-radius: var(--radius);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+    cursor:n-resize;
+    transition: all .3s linear;
+}
+
+.btn-contenedor{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.btn:hover{
+    background-color: var(--color-letra-3);
+    color: var(--color-letra-4);
 }
 
 /*=====  End of Estilos del main  ======*/
@@ -56,6 +95,7 @@ main{
 
 footer{
     padding: .5rem;
+    text-align: center;
 }
 
 /*=====  End of Estilos del pie  ======*/

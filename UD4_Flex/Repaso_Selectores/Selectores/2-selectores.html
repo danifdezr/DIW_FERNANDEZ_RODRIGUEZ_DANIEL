@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Ejercicio 2 de selectores">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ejercicio 2 de selectores</title>
+    <link rel="stylesheet" href="./styles/2-styles _txt.css">
+</head>
+
+<body>
+    <header>
+        <h1>Cuenta Cuentos</h1>
+    </header>
+    <p>Una serie de cuentos</p>
+
+    <article>
+        <p class="hello">Buenas noches!</p>
+        <p id="especial">Te voy a contar un cuento</p>
+
+        <h2>Cuento de los tres cerditos</h2>
+        <p>Había una vez <em>tres hermanos cerditos</em> que vivían en el bosque. Como el malvado lobo siempre los estaba
+            persiguiendo para comérselos dijo un día el mayor:</p>
+        <p class="personaje">Tenemos que hacer una casa para protegernos de lobo. Así podremos escondernos dentro de
+            ella cada vez que
+            el lobo aparezca por aquí.</p>
+        <p>A los otros dos les pareció muy buena idea, pero no se ponían de acuerdo respecto a qué material utilizar.
+        </p>
+        <p>Al final, y para no discutir, decidieron que cada uno la hiciera de lo que quisiese.</p>
+        <p>.......</p>
+
+    </article>
+
+  
+    <article>
+        <h2>El cuento de Peter Pan</h2>
+
+        <p>Una noche el señor y la señora Darling salieron a cenar a casa de los vecinos del número 27. Los niños se quedaron en casa al cuidado de Nana y no tardaron en quedarse todos dormidos.</p>
+
+        <p>Vivían felices y tranquilos hasta que Peter Pan llegó a sus vidas. Todo comenzó la noche en que Nana tenía el día libre y la señora Darling se quedó a cargo de sus hijos. Cuando todos, incluida ella,
+            estuvieron dormidos el muchacho entró por la ventana. Pero entonces ella se despertó y se asustó tanto al verle que lanzó un fuerte grito. Entonces apareció Nana, que cerró la ventana para evitar que saliera
+            y acabó atrapando su sombra. Y así fue como la sombra de Peter Pan acabó en un cajón de la casa de los Darling.</p>
+        <p><span class="personaje">¿Quién está llorando? </span>- preguntó Wendy, a quien despertaron los sollozos.</p>
+        <p><span class="personaje">Soy yo</span>-Contestó <em>Peter</em></p>
+        <p class="personaje">¿Cómo te llamas?.....</p>
+    </article>
+
+    <p>¿Te ha gustado este cuento?</p>
+
+
+    <article>
+        <h2>El patito feo</h2>
+
+        <p>Todos esperaban en <em>la granja</em> el gran acontecimiento. El nacimiento de los polluelos de <em>mamá pata</em>. Llevaba
+            días empollándolos y podían llegar en cualquier momento.</p>
+
+        <p>El día más caluroso del verano <em>mamá pata</em> escuchó de repente…¡cuac, cuac! y vio al levantarse cómo uno por uno
+            empezaban a romper el cascarón. Bueno, todos menos uno.</p>
+    </article>
+    <article>
+        <h2>Registro para el acceso a los cuentos</h2>
+        <ul>
+            <li><a href="http://www.cuentoscortos.com/cuentos-clasicos/el-patito-feo">El patito feo</a></li>
+            <li><a href="http://www.cuentoscortos.com/cuentos-clasicos/la-ratita-presumida">La ratita presumida.</a></li>
+        </ul>
+                
+        <form action="">
+            <h3>Regístrate</h3>
+            <fieldset>
+                <legend>Date de alta</legend>
+                <p>
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" name="nombre" id="nombre" />
+                </p>
+                <p>
+                    <label for="password">Contraseña</label>
+                    <input type="password" name="password" id="password" />
+                </p>
+            </fieldset>
+            <fieldset>
+                <legend>Marca tus cuentos favoritos</legend>
+                <label for="cuento">Listado de cuentos</label>
+                <ul>
+                    <li>Caperucita roja. <input type="checkbox" id="cuento" checked> </li>
+                    <li>Los tres cerditos. <input type="checkbox" id="cuento" checked> </li>
+                    <li>El gato con botas <input type="checkbox" id="cuento"></li>
+                    <li>El patito feo <input type="checkbox" id="cuento"></li>
+                    <li>La ratita presumida <input type="checkbox" id="cuento"></li>
+                    <li>Peter Pan <input type="checkbox" id="cuento"></li>
+                </ul>
+            </fieldset>
+            <input type="submit" value="Registrarse">
+        </form>
+    </article>
+
+    <p>Hasta luego cocodrilo...</p>
+
+</body>
+
+</html>

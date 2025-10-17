@@ -1,0 +1,125 @@
+/* UD2- Repaso CSS
+    Ejercicio 2 de Selectores 
+    Autor: 
+    fecha:
+    Nombre del fichero: 2-styles.css
+*/
+
+/* Da estilo a los elementos HTML de acuerdo con las siguientes instrucciones.
+NO ALTEREs EL HTML EXISTENTE PARA HACER ESTO. ¡ESCRIBE SOLO CSS! */
+:root {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* todos los encabezados tendrán como tipo de letra
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+*/
+
+/* H1 tamaño letra 3.5 veces la letra root */
+h1{
+    font-size: 3.5rem;
+}
+
+/* H2 tamaño letra 2.5 veces la letra root */
+h2 {
+    color: purple;
+    font-size: 2.5rem;
+}
+
+/* H3 tamaño letra 2 veces la letra root */
+
+h3{
+    font-size: 2rem;
+}
+
+/* ponemos la cabecera centrada horizontal y verticalmente. Color de fondo #cc0066 y blanco el texto.
+Ancho 100% el ancho del viewport del ancho
+alto 100% */
+header {
+    /* para centrar horizontalmente. Tiene que funcionar como bloque, si es un elemento inline debemos poner
+    display: block*/
+    margin: 0 auto;
+    text-align: center;
+    /* esta es una forma de hacerlo 
+    position: relative;
+    top: 50%; */
+    /* otra forma es hacer que la cabecera se comporte como una celda de una tabla y emplear verticarl-align*/
+    display: table-cell;
+    vertical-align: middle;
+    width: 100vw;
+    height: 100%;
+    background-color: #cc0066;
+    color: white;
+}
+
+/* para los article 
+   Margenes superior e inferior 1 vez la letra root y derecho e izquierdo 2 veces la letra root
+   Padding 2 veces la letra root
+   boder redondeado de 10px 
+   Color bodel plum
+   Color de fondo verde:227  rojo:249 azul:231 opacidad:0.444
+   */
+
+/* para todos los p, ul, a margenes de 10px*/
+
+/* para todos los li margen derecho de 20px  */
+
+/* para todos los li margen inferior de 10px menos el último*/
+
+/* todos los h3 que esten dentro de un article
+   texto centrado color blueviolet
+*/
+
+/* Hacer que todos los elementos <li> dentro de un fielset sean verdes (elija su propio azul hexadecimal)*/
+
+/* para todos los fileset que no sea el primero margen superior de 10px */
+
+/* boder del formulario color purpura. Relleno de 10px*/
+
+
+/* para la leyenda el fielset contiguo a un h3 color de texto #cc0066 negrita*/
+
+/* para todos los párrafos que estén fuera de los article se ponga de color rojo */
+
+/* Dar a todo lo que tenga la clase 'hello' un fondo blanco*/
+
+/* todos los textos de la clase personaje en cursiva y de color darkblue */
+
+/* Hacer el <em> en que no tengan hermanos del mimos tipo se pongan de 
+   color de fondo darkmagenta
+   color de letra blanco
+   fuente 16px*/
+
+/* Dale al 2.° <p> dentro del 2.° <article> un borde blanco de 5px*/
+
+/*Hacer que todas las casillas de verificación "marcadas" tengan un margen izquierdo de 50px*/
+
+/* para el botón submit del formulario 
+   relleno de 10px
+   color de fondo #cc0066
+   color del texto blanco
+   fuente 1.3 veces el tamaño de la fuente de root
+   borde redondeado como en la imagen
+    Botón centrado
+*/
+
+/* Poner los elementos <label> en MAYÚSCULAS sin cambiar el HTML */
+
+/*Hacer que el párrafo con id 'especial' purpura de tamaño 1.5rem*/
+
+/* para el párrafo con id 'especial' hacer que antes y despues de el se añada las comillas dobles (sin escribir las comillas ni tocar el html) en color púrpura, tamaño 1.8rem*/
+
+/* hacer que para la clase "hello" se ponga delante del párrafo el símbolo de exclamación que falta*/
+
+
+/*Hacer que el color del elemento <h1> cambie a color agua cuando se pasa el cursor por encima */
+
+/*Hacer grises los elementos <a> que han sido visitados */
