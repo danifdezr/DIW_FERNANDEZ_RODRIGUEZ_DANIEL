@@ -1,7 +1,7 @@
 /* UD2- Repaso CSS
     Ejercicio 2 de Selectores 
-    Autor: 
-    fecha:
+    Autor: Daniel Fernández Rodríguez
+    fecha: 21 - 10 - 2025
     Nombre del fichero: 2-styles.css
 */
 
@@ -22,6 +22,10 @@ NO ALTEREs EL HTML EXISTENTE PARA HACER ESTO. ¡ESCRIBE SOLO CSS! */
 /* todos los encabezados tendrán como tipo de letra
 font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 */
+
+h1, h2, h3, h4{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
 
 /* H1 tamaño letra 3.5 veces la letra root */
 h1{
@@ -52,8 +56,7 @@ header {
     position: relative;
     top: 50%; */
     /* otra forma es hacer que la cabecera se comporte como una celda de una tabla y emplear verticarl-align*/
-    display: table-cell;
-    vertical-align: middle;
+    display: block;
     width: 100vw;
     height: 100%;
     background-color: #cc0066;
@@ -68,39 +71,112 @@ header {
    Color de fondo verde:227  rojo:249 azul:231 opacidad:0.444
    */
 
+article{
+    margin: 1rem 2rem 1rem 2rem;
+    padding: 2rem;
+    border: 1px solid plum;
+    border-radius: 10px;
+    background-color: rgba(248, 227, 231, 0.444);
+
+}
+
 /* para todos los p, ul, a margenes de 10px*/
+
+p, ul, a{
+    margin: 10px;
+}
 
 /* para todos los li margen derecho de 20px  */
 
+li{
+    margin-left: 20px;
+}
+
 /* para todos los li margen inferior de 10px menos el último*/
+
+li:not(:last-of-type){
+    margin-bottom: 10px;
+}
 
 /* todos los h3 que esten dentro de un article
    texto centrado color blueviolet
 */
 
+article h3{
+    color: blueviolet;
+}
+
 /* Hacer que todos los elementos <li> dentro de un fielset sean verdes (elija su propio azul hexadecimal)*/
+
+fieldset{
+    border: none;
+}
+fieldset li{
+    color: #20B2AA;
+}
 
 /* para todos los fileset que no sea el primero margen superior de 10px */
 
+fieldset:not(:first-of-type){
+    margin-top: 10px;
+}
+
 /* boder del formulario color purpura. Relleno de 10px*/
 
+form{
+    border: 1px solid purple;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
 
 /* para la leyenda el fielset contiguo a un h3 color de texto #cc0066 negrita*/
 
+h3+fieldset>legend{
+    color: #cc0066;
+    font-weight: bold;
+}
+
 /* para todos los párrafos que estén fuera de los article se ponga de color rojo */
+
+p:not(article p){
+    color: red;
+}
 
 /* Dar a todo lo que tenga la clase 'hello' un fondo blanco*/
 
+.hello{
+    background-color: white;
+}
+
 /* todos los textos de la clase personaje en cursiva y de color darkblue */
+
+.personaje{
+    font-style: italic;
+}
 
 /* Hacer el <em> en que no tengan hermanos del mimos tipo se pongan de 
    color de fondo darkmagenta
    color de letra blanco
    fuente 16px*/
 
+em:only-of-type {
+  background-color: darkmagenta;
+  color: white;
+  font-size: 16px;
+}
+
 /* Dale al 2.° <p> dentro del 2.° <article> un borde blanco de 5px*/
 
+article:nth-of-type(2) p:nth-of-type(2){
+    border: 5px solid white;
+}
+
 /*Hacer que todas las casillas de verificación "marcadas" tengan un margen izquierdo de 50px*/
+
+input[type="checkbox"]:checked {
+  margin-left: 50px;
+}
 
 /* para el botón submit del formulario 
    relleno de 10px
@@ -111,15 +187,53 @@ header {
     Botón centrado
 */
 
+input[type="submit"]{
+  padding: 10px;                  
+  background-color: #cc0066;      
+  color: white;                   
+  font-size: 1.3rem;
+  border: none;     
+  border-radius: 8px;
+  align-self: center;
+}
+
 /* Poner los elementos <label> en MAYÚSCULAS sin cambiar el HTML */
+
+label{
+    text-transform: uppercase;
+}
 
 /*Hacer que el párrafo con id 'especial' purpura de tamaño 1.5rem*/
 
+#especial{
+    color: purple;
+    font-size: 1.5rem;
+}
+
 /* para el párrafo con id 'especial' hacer que antes y despues de el se añada las comillas dobles (sin escribir las comillas ni tocar el html) en color púrpura, tamaño 1.8rem*/
+
+#especial::before,
+#especial::after {
+    content: '"';
+    color: purple;
+    font-size: 1.8rem;
+}
+
 
 /* hacer que para la clase "hello" se ponga delante del párrafo el símbolo de exclamación que falta*/
 
+.hello::before{
+    content: '¡';
+}
 
 /*Hacer que el color del elemento <h1> cambie a color agua cuando se pasa el cursor por encima */
 
+h1:hover{
+    color: aqua;
+}
+
 /*Hacer grises los elementos <a> que han sido visitados */
+
+a:visited{
+    color: grey;
+}

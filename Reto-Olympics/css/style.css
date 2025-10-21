@@ -1,4 +1,4 @@
-@import "./fonts.css";
+    @import "../assets/fonts/";
 
 *,*::after,*::before{
     margin: 0;
@@ -34,6 +34,8 @@ img {
 }
 
 body {
+    background-color: var(--bg-color);
+    max-width: 100vw;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -45,6 +47,10 @@ h1{
 }
 h2,h3,h4,h5,h6{
     font-family: var(--font-title-segunda);
+}
+
+h2{
+    font-size: 2.5rem;
 }
 
 .cards{
@@ -65,6 +71,10 @@ h2,h3,h4,h5,h6{
 .btn:hover{
     color: var(--color-primario);
     background-color: var(--color-secundario);
+}
+
+section:not(#portada){
+    margin-bottom: 1rem;
 }
 
 /*=============================================
@@ -136,7 +146,6 @@ text-shadow:
 1px -1px 0 #666;
 }
 
-/*=====  End of estilos del main  ======*/
 
 
 /*=============================================
@@ -220,6 +229,79 @@ text-shadow:
 /*=====  End of Estilos deporte  ======*/
 
 
+/*=============================================
+=            Estilos de la sección Equipo            =
+=============================================*/
+
+#equipo{
+    background: url("../assets/images/background-about2.png");
+    color: var(--color-primario);
+    padding: 1rem;
+    font-size: 1.2rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+}
+
+
+#equipo figure{
+    max-width: 400px;
+    /* border-radius: 5px;
+    overflow: hidden; */
+}
+
+#equipo figure img{
+    border-radius: 5px;
+}
+/*=====  End of Estilos de la sección Equipo  ======*/
+
+
+/*=============================================
+=            Estilos medallero            =
+=============================================*/
+
+#medallero{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+}
+
+caption{
+    padding-bottom: .5rem;
+}
+
+table{
+    font-size: 1.1rem;
+    background-color: var(--color-primario);
+    box-shadow: 4px 4px 10px #c3c3c3;
+}
+
+/* table, th, td, tr{
+    border: 1px solid ;
+    border-collapse: collapse;
+} */
+
+th,td{
+    padding: 1rem;
+}
+
+th{
+    background-color: var(--bg-tabla);
+    color: var(--color-primario);
+    font-family: var(--font-title-segunda);
+    font-size: 1.3rem;
+}
+
+tr:not(:last-of-type) td{
+    border-bottom: 1px dotted #c4c4c4;
+}
+
+/*=====  End of Estilos medallero  ======*/
+
+/*=====  End of estilos del main  ======*/
+
 
 /*=============================================
 =            Estilos del footer            =
@@ -258,6 +340,15 @@ footer{
     #contador{
         max-width: 800px;
     }
+
+    #equipo .contenido{
+        flex: 1;
+    }
+    /* 
+    #equipo .contenido{
+        flex: 1 0 70%
+    }
+    */
 }
 
 /*=====  End of Media queries  ======*/
