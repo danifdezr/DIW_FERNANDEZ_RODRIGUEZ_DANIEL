@@ -1,0 +1,160 @@
+@import url("https://fonts.googleapis.com/css?family=Dosis:400,700");
+
+:root {
+  --main-letra-color:#415840;
+  --main-letra-dark-color: black;
+  --main-fondo-color: #ebe2e5;
+  --menu-fondo-color: #f3c5d9;
+  --page-fondo-color: #feffff;
+  font: 16px/1.5 "Dosis", sans-serif;
+
+}
+
+*,*::after,*::before{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;    
+}
+
+button {
+  background: none;
+  outline: none;
+  cursor: pointer;
+}
+
+
+ul {
+  list-style: none;
+  justify-content: center;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+}
+
+body>* {
+  padding: 20px;
+}
+
+
+/*********** cabecera **********/
+
+header {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+header picture{
+  display: inline-block;
+}
+
+.cta-contact{
+  font-size: 20px;
+  padding: 8px;
+}
+
+nav li a:hover{
+  background-color: var(--menu-fondo-color);
+  color: var(--main-letra-color);
+  border-radius: 10px;
+  border: solid 1px var(--main-letra-color);
+}
+
+#activa{
+  text-decoration: underline;
+  font-weight: bold;
+}
+nav ul{
+  display: flex;
+  flex-direction: row;
+}
+nav a{
+  padding: 10px;
+  font-size: 1rem;
+}
+nav li {
+  padding: 20px;
+}
+
+/********** contenido principal de la página ***********/
+main{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  padding: 20px;
+  background-color: var(--main-fondo-color);
+  background-image:url(../img/fondo.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.textoCentro h2{
+  text-align: center;
+  padding: 10px;
+}
+
+.textoCentro {
+  color: var(--main-letra-color);
+  font-size: 20px;
+}
+
+img {
+  width: 100%;
+  object-fit: cover;
+}
+
+/******* galeria ****/
+
+
+/***** estilo de la tienda *****/
+
+/********* pie ********/
+
+footer{
+  display: flex;
+  justify-content: space-between;
+}
+
+.accesibilidad{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+footer ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2px;
+}
+
+
+/****** Media Queries ************/
+
+@media screen and (min-width:720px) {
+
+  /* header{
+    display: flex;
+    flex-direction: row;
+  } */
+  .cta-contact {
+    order: 1;
+  }
+
+  nav a {
+    font-size: 2rem;
+  }
+
+  footer ul{
+    gap: 12px;
+  }
+}

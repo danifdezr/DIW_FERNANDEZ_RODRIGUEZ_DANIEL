@@ -1,0 +1,16 @@
+@import "./style.css";
+
+.fotos ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.fotos li{
+    max-width: 250px;
+    padding: 1rem;
+}
+.fotos img{
+    border-radius: 10px;
+}
