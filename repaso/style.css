@@ -1,0 +1,71 @@
+/* *,*::before,*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header{
+    background-color: red;
+}
+
+main{
+    background-color: yellow;
+}
+
+footer{
+    background-color: beige;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+main{
+    flex: 1;
+} */
+
+
+
+
+
+
+
+/* ----------------------------------------- */
+
+
+*,*::before,*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header{
+    background-color: red;
+}
+
+main{
+    background-color: yellow;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+footer{
+    background-color: beige;
+}
+
+body{
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+}
+
+main div{
+    background-color: white;
+    margin: 10px;
+}
+
+main div:nth-child(1){
+    order: 1;
+}

@@ -1,0 +1,32 @@
+/* *,*::before,*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+} */
+
+.contain-animation{
+    height: 350px;
+}
+
+.contain-bear{
+    width: 575px;
+    height: 200px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.cover {
+    width: 675px;
+    height: 150px;
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background-color: #8fd5d5;
+    animation: walk 7s steps(7, end) infinite;
+}
+
+@keyframes walk {
+    to{
+        transform: translateX(675px);
+    }
+}

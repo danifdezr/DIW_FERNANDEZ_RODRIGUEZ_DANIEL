@@ -1,0 +1,40 @@
+:root{
+    --main-letra-color: red;
+
+}
+
+header{
+    background-color: var(--main-letra-color);
+    grid-area: header;
+}
+
+main{
+    min-height: 90vh;
+    background-color: yellow;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-area: main;
+}
+
+aside{
+    background-color: blue;
+    grid-area: sidebar;
+}
+
+footer{
+    background-color: beige;
+    grid-area: footer;
+}
+
+body{
+    min-height: 100vh;
+    display: grid;
+    grid-template-areas: "header header"
+                         "main sidebar"
+                         "footer footer";
+}
+
+@media screen and (min-width:720px){
+    
+}
+

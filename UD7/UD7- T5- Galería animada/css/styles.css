@@ -1,0 +1,76 @@
+@import "https://unpkg.com/open-porps";
+
+*,*::before,*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --big-tile-size: 20vmin;
+    --scale: 0.4;
+    --rotation: 270deg;
+    --tile-size: calc(var(--big-tile-size) / 3);
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--sand-1);
+    display: flex;
+    flex-direction: column;
+}
+
+main{
+    width: 80%;
+    height: 60%;
+    flex: 1;
+}
+
+img{
+    --rotation: -270deg;
+    height: 200%;
+    min-width: 200%;
+    aspect-ratio: 1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    animation:  scale-up 1s;
+    animation-fill-mode: both;
+}
+
+
+ul{
+    list-style-type: none;
+    display: grid;
+    gap: 1vmin;
+    grid-template: repeat(9, var(--tile-size)) / repeat(9, var(--tile-size));
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(var(--scale));
+    animation:  scale-up 1s;
+    animation-fill-mode: both;
+
+}
+
+li {
+    grid-column: var(--x1, auto) / var(--x2, auto);
+    grid-row: var(--y1, auto) / var(--y2 , auto);
+    max-inline-size: 100%;
+    border-radius: var(--radius-2);
+    overflow: hidden;
+    background-color: hsl(0 0% 75% / 0.2);
+    position: relative;
+}
+
+@keyframes scale-up{
+    0%{
+        transform: translateX(-50%) translateY(-50%) scale(var(--scale)) rotate(0deg);
+    }
+    100%{
+            transform: translateX(-50%) translateY(-50%) scale(1) rotate(var(--rotation));
+    }
+}
+
