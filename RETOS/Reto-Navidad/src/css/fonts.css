@@ -1,0 +1,19 @@
+/**
+ *
+ * Hoja para importar las fuentes
+ *
+ */
+
+@font-face {
+    font-family: "Merry Christmas";
+    src: url(/RETOS/Reto-Navidad/assets/font/MerryChistmas/MerryChristmasFlake.ttf) format(truetype);
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+   font-family: 'Montserrat';
+   src: url(../../assets/font/Montserrat/static/Montserrat-Bold.ttf) format(truetype);
+   font-style: normal;
+   font-weight: normal;
+}

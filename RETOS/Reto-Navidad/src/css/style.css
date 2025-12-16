@@ -1,0 +1,168 @@
+/**
+ *
+ * Hoja para el layout
+ *
+ */
+@import "fonts.css";
+
+
+/* === RESET Y ESTILOS GENERALES === */
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg-color: rgba(0, 0, 0, 0.5);
+  --bg-color-secundario: #3b4338;
+  --bg-color-card: rgba(255, 255, 255, 0.08);
+  --color-texto: #ffffff;
+  --color-hover: #ca393f;
+  --color-borde: rgba(255, 215, 0, 0.2);
+  --color-terciario: #ffd700;
+  --size-h1: 3.5rem;
+  --font-display: 'Mountains', serif;
+  --font-titulos: 'Whisper', cursive;
+  --font-titulos2: 'Merry Chirmast Flag', cursive;
+  --box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+  font: 12px/1.6 "Montserrat", "Segoe UI", "sans-serif";
+  color: var(--color-texto);
+}
+
+img{
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
+h1{
+  font-family: var(--font-titulos2);
+}
+
+/*=============================================
+=            Estilos del header            =
+=============================================*/
+
+header{
+  background-color: var(--bg-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav ul{
+  display: flex;
+  padding: 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+nav ul li{
+  padding: 1rem;
+  list-style: none;
+  color: var(--color-texto);
+}
+
+nav ul li a{
+  text-decoration: none;
+  color: var(--color-texto);
+}
+
+header figure img{
+  max-width: 80px;
+  max-height: 80px;
+}
+
+/*=====  End of Estilos del header  ======*/
+
+
+/*=============================================
+=            Estilos del main            =
+=============================================*/
+
+.portada{
+  background: rgba(255, 255, 255, 0.3) url(../../assets/img/fondo2.jpg) ;
+  background-blend-mode: soft-light;
+  background-size: cover;
+  height: 25vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.portada h1, .portada h2{
+  color: var(--color-terciario);
+}
+
+.portada button{
+  background-color: var(--color-hover);
+  color: var(--color-texto);
+  padding: 1rem;
+  border-radius: 30px;
+  font-weight: bold;
+  width: 18rem;
+}
+
+/*=====  End of Estilos del main  ======*/
+
+
+
+
+body {
+  /* Rojo oscuro como fondo */
+  background: linear-gradient(to bottom, #8b0000, #660000);
+  min-width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+
+}
+
+main{
+  flex: 1;
+}
+
+
+/*=============================================
+=            Estilos footer            =
+=============================================*/
+
+footer{
+  background-color: var(--bg-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0.5rem;
+  gap: 1rem;
+  align-items: center;
+}
+
+footer ul{
+  list-style: none;
+  display: flex;
+  gap: 1rem; 
+}
+footer ul li a{
+  color: white;
+  font-size: 2rem;
+}
+
+/*=====  End of Estilos footer  ======*/
+
+
+
+/*=============================================
+=            Media queries            =
+=============================================*/
+
+@media screen and (min-width:720px) {
+  footer{
+    flex-direction: row;
+  }
+}
+
+/*=====  End of Media queries  ======*/
+
