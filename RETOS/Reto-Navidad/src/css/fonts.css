@@ -17,3 +17,8 @@
    font-style: normal;
    font-weight: normal;
 }
+
+@font-face {
+    font-family: 'Mountains';
+    src: url(../../assets/font/Mountains_of_Christmas/MountainsofChristmas-Regular.ttf) format(truetype);
+}
