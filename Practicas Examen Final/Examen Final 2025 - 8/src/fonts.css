@@ -1,0 +1,17 @@
+/*=============================================
+=            Estilos de las fuentes            =
+=============================================*/
+
+@font-face {
+    font-family: 'MerriWeather';
+    src: url(../assets/fonts/Merriweather/Merriweather-Regular.ttf) format(truetype);
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'MerriWeather';
+    src: url(../assets/fonts/Merriweather/Merriweather-Bold.ttf) format(truetype);
+    font-style: normal;
+    font-weight: bold;
+}

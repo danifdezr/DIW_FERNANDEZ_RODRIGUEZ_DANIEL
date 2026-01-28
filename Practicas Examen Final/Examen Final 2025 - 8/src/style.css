@@ -1,0 +1,292 @@
+@charset "UTF-8";
+@import "fonts.css";
+/* importa las fuentes y el resto de hojas de estilos */
+/*=============================================
+=            Estilos generales            =
+=============================================*/
+
+*,
+*::after,
+*::before{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --color-secundario: #c09551;
+  --color-secundario-claro: #f4bc63ac;
+
+  --color-secundario-oscuro: #7F632E;
+  --color-primario: rgb(50, 50, 63);
+  --color-fondo: rgba(10, 9, 24, 0.895);
+  --color-fondo-2: rgba(10, 9, 24, 0.895);
+  --color-fondo-claro: #edf2f8;
+
+  --size-h1: 2.5rem;
+  --fuente-secundaria: 'Merriweather', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  --fuente-primaria: 'Times New Roman', Times, serif;
+  /* define una variable para las transiciones de forma que se aplique a todas
+  las propiedades con una duración de 0.6s y curva: comenzará lentamente, será 
+  más rápido en el medio de la animación y luego terminará lentamente
+  Empleada en: la barra del menú, en los botones, en los iconos (clase icono)*/
+  font: 14px/1.6 var(--fuente-primaria);
+}
+
+html {
+  background-color: var(--color-primario);
+}
+
+body {
+  max-width: 2560px;
+  color: var(--color-primario);
+  background-color: #fafafa;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.icono {
+  max-width: 30px;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--fuente-secundaria);
+}
+
+h1 {
+  font-size: var(--size-h1);
+  color: white;
+  letter-spacing: 4px;
+  position: absolute;
+  top: -1000%;
+}
+img{
+  width: 100%;
+  object-fit: cover;
+}
+
+
+/*=============================================
+=            Estilos ventana modal            =
+=============================================*/
+
+#reserva{
+  margin: 0 auto;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 2rem;
+}
+
+#reserva .form{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+#reserva .form fieldset{
+  padding: 1rem;
+}
+
+.btn__close{
+  align-self: center;
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+}
+
+/*=====  End of Estilos ventana modal  ======*/
+
+
+
+
+/* h2 tamaño fuente h1 menos 1/4 del tamaño de la fuente de h1*/
+
+/* h3 tamaño fuente h1 menos 1/2 del tamaño de la fuente de h1*/
+
+/* separador es una linea punteada de color --color-secundario empleada solamente en diseño
+móvil (hasta 720px) para separar el contenido del pie. Ver video */
+
+/* los enlaces que no son hijos de un nav tendrán como color de texto color-secundario*/
+/*=====  End of Estilos generales  ======*/
+
+
+/*=============================================
+=            Estilos de la cabecera            =
+=============================================*/
+
+.header{
+  background-color: black;
+  opacity: .5;
+}
+
+header {
+  max-width: 2560px;
+  padding: 0 1rem;
+}
+
+.nav{
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav__lista{
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.nav__item{
+  list-style: none;
+  line-height: 2px;
+  font-size: 1.7rem;
+}
+
+.nav__item a{
+  text-decoration: none;
+  color: white;
+}
+
+.logo {
+  max-width: 100px;
+}
+
+/* fuente de las obciones del menú 1.7rem, separación entre las letras 2px.*/
+/* Al pasar sobre cada opción del menú aparece una barra de alto 4px. */
+
+/*=====  End of Estilos de la cabecera  ======*/
+
+
+/*=============================================
+=            Estilos del main            =
+=============================================*/
+main {
+  flex: 1;
+  width: 100%;
+  padding-bottom: 4rem;
+}
+
+#nosotros h3 {
+  color: var(--color-secundario-oscuro);
+}
+
+Copy
+/* para todos los h2 del main,
+ que no estén después de un h1 color color-primario y alineado al centro
+*/
+/* tanto #nosotros como #visitas tendrán un padding de 1rem y un áncho máximo
+de 1400px*/
+
+
+
+/*=============================================
+=            Estilos ventana modal            =
+=============================================*/
+
+
+
+/*=====  End of Estilos ventana modal  ======*/
+
+
+
+/*=============================================
+=            Estilos de la portada            =
+=============================================*/
+
+/*La portada tendrá como fondo la imagen puertodeportivo-vilanova.jpg
+y el gradiente
+Fuente del texto 1.2rem
+
+El texto de la portada ocupará como máximo el 90% del contenedor para móvi y dede
+720px el 70%*/
+
+#portada {
+  height: 939px;
+  background: linear-gradient(rgba(11, 10, 31, 0.712), rgba(11, 10, 31, 0.726));
+}
+
+
+/*=====  End of Estilos de la portada  ======*/
+
+
+
+
+/*=============================================
+=            Estilos nosotros - servicios         =
+=============================================*/
+#nosotros {
+  padding: 1rem;
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  text-align: left;
+  gap: .5rem;
+}
+
+
+
+/*=============================================
+=            Estilos de las cards            =
+=============================================*/
+/* ancho máximo 1400px
+   Responsive sin emplear media queries.
+   Tamaño máximo de la card 370px
+   
+   Al cargar la página se ejecuta una animación llamada rotar con una duración
+   de .4s lineal que rota cada una de las cards
+
+   Al pasar sobre cada card: borde de 3px de color --color-secundario
+
+   ancho máximo de la imagen de cada card 55%
+
+   Boton 1.5rem transparente.
+   */
+
+
+
+
+/*=====  End of Estilos del main  ======*/
+
+
+
+/*=============================================
+=            Estilos de visitas            =
+=============================================*/
+/* El primer span del li tendrá como tamaño de fuente 2rem */
+
+/* los li tienen un ancho de 200px */
+
+/* .sbub-info espaciado 3px peso de la fuente 600*/
+
+/* SOLO PARA MOVIL, tiene que aparecer antes de cada li salvo el primero
+el ancla (anchor.svg). Tiene unas dimensiones de 2x2 rem */
+
+
+
+
+
+
+/*=============================================
+=            Estilos del footer            =
+=============================================*/
+footer {
+  background-color: var(--color-fondo-2);
+  padding: 1rem;
+}
+
+
+
+/*=====  End of Estilos del footer  ======*/
+
+
+/*=============================================
+=            Media Queries            =
+=============================================*/
+/* Para pantallas desde 720px. Fuente 16px tamaño h1 4rem */
+
+/*=====  End of Media Queries  ======*/

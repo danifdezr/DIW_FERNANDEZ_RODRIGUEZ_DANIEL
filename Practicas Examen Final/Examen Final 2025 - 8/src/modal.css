@@ -1,0 +1,46 @@
+/*=============================================
+=            Estilos de los modales            =
+=============================================*/
+/* ancho máximo 550px y mínimo 280px
+   sombra 4px eje X y Y, blur 5px
+   Fuente: --fuente-secundaria
+   color texto: --color-primario
+   color fondo: --color-fondo-claro
+   
+   Color del telón de fondo del modal
+   --color-fondo
+   */
+
+form {
+  font-size: 1.2rem;
+  padding: 1rem;
+}
+
+label {
+  padding: .5rem;
+  min-width: 100px;
+}
+
+
+input {
+  padding: .25rem 0.1rem;
+}
+
+/* los campos de numéricos tendrá un ancho máximo 3.25rem. 
+Para pantallas de 720px para arriba: el último campo
+de tipo numerico tendrá un margen superior de 1 rem */
+
+
+
+
+.btn__close {
+  /* posicionado tal y como se puede ver en el vídeo*/
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+/* el boton de limpiar tendrá como color de fondo rgb(255, 81, 0) */
+
+.btn:active {
+  box-shadow: 0 0 0 black inset;
+}

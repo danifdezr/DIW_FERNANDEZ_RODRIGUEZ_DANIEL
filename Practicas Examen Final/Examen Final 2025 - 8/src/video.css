@@ -1,0 +1,27 @@
+/*=============================================
+=            Estilos del video            =
+=============================================*/
+
+video {
+  max-width: 600px;
+  width: 100%;
+}
+
+/* Estilos genéricos par los subtítulos
+- Fondo negro
+- Fuente 1.2rem Franklin Gothic Medium", "Arial Narrow",Arial,sans-serif
+
+*/
+
+/* Estilos para el título
+- Sombra del texto de 1px en el eje X e Y
+- Fuente: fuente secundaria.
+- Color de la fuente: color-fondo-2
+- Tamaño de la fuente 15rem
+*/
+
+/* Estilos para el Narrador
+- Fuente: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif
+- Color de la fuente: azul
+- Fondo blanco
+*/

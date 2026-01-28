@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arousa Mar - Club naútico</title>
+  <link rel="stylesheet" href="./src/style.css">
+
+</head>
+
+<body>
+  <div class="header">
+    <header>
+      <h1>Hola Vilanova</h1>
+      <nav class="nav">
+        <a href="#" class="logo">
+          <img src="./assets/img/logo.png" alt="Logo enlace página principal">
+        </a>
+        <ul class="nav__lista">
+          <li class="nav__item"><a href="#">Nosotros</a></li>
+          <li class="nav__item"><a href="#">Servicios</a></li>
+          <li class="nav__item"><a href="#">Contactos</a></li>
+          <li class="nav__item"><a href="#" onclick="window.reserva.showModal()">Reservas</a></li>
+        </ul>
+      </nav>
+    </header>
+  </div>
+
+  <main class="main">
+    <section class="portada">
+      <h2>Arousa Mar</h2>
+      <h3>Puerto Deportivo</h3>
+      <p class="informacion">
+        El considerable atractivo de las Rías Gallegas y sus características,
+        que las permiten navegables durante todos los días del año,
+        hacen que cada vez los navegantes demanden más puntos de atraque en ellas.
+        Así, en medio de la Ría de Arousa y de reciente construcción se encuentra
+        el Puerto Deportivo de Vilanova de Arousa.      
+      </p>
+    </section>
+    <section class="nosotros">
+      <h2>Arousa Mar</h2>
+      <h3>42º 33´ 97´´ N - 08º 49´ 99´´ W</h3>
+      <!--video-->
+      <video width="320" height="240" controls>
+        <source src="./assets/videos/Puerto_deportivo.mp4" type="video/mp4">
+        <track src="./assets/videos/subtitulos_es.txt" kind="subtitles" srclang="es" label="Español" default>
+      </video>
+    </section>
+
+    <section class="servicios">
+      <h2>Servicios</h2>
+      <ul class="cards">
+        <li class="card">
+          <figure>
+            <img src="./assets/img/steering.png" alt="">
+          </figure>
+          <h3>Para todos los marineros</h3>
+          <button class="btn">Información</button>
+        </li>
+        <li class="card">
+          <figure>
+            <img src="./assets/img/rope.png" alt="">
+          </figure>
+          <h3>Para tu comfort</h3>
+          <button class="btn">Información</button>
+        </li>
+        <li class="card">
+          <figure>
+            <img src="./assets/img/mask.png" alt="">
+          </figure>
+          <h3>Para estar el día</h3>
+          <button class="btn">Información</button>
+        </li>
+      </ul>
+    </section>
+    <section id="visitantes">
+      <h2>Embarcaciones visitantes</h2>
+      <ul>
+        <li>
+          <span>568</span>
+          <span class="sub-info">yates</span>
+        </li>
+        <li>
+          <span>37</span>
+          <span class="sub-info">catamaranes</span>
+        </li>
+        <li>
+          <span>536</span>
+          <span class="sub-info">veleros</span>
+        </li>
+        <li>
+          <span>65</span>
+          <span class="sub-info">Motos de agua</span>
+        </li>
+      </ul>
+    </section>
+    <!--modal-->
+    <dialog id="reserva">
+      <button class="btn__close" onclick="window.reserva.close()">X</button>
+      <section>
+        <h2>Reservas</h2>
+        <form action="#" class="form">
+          <!-- todos los campos son requeridos menos el nombre de contacto-->
+          <fieldset>
+            <legend>Datos del Barco</legend>
+            <p class="campos">
+              <label>Nombre</label>
+              <input type="text" name="barco" id="barco">
+            </p>
+            <p class="campos">
+              <label>Eslora (m)</label>
+              <input type="number" name="eslora" id="eslora" min="2.5" max="16.0" step="0.1" value="6.0">
+            </p>
+            <p class="campos">
+              <label>Calado (m)</label>
+              <input type="number" name="calado" id="calado" min="0" max="3" step="0.1" value="6.0">
+            </p>
+            <p class="campos">
+              <label>Manga (m)</label>
+              <input type="number" name="manga" id="manga" min="1.5" max="6" step="0.1" value="2.0">
+            </p>
+          </fieldset>
+          <fieldset>
+            <legend>Fechas de Reserva</legend>
+            <p class="campos">
+              <label>Fecha llegada</label>
+              <input type="date" name="llegada" id="llegada" min="12-03-2025">
+            </p>
+            <p class="campos">
+              <label>Fecha salida</label>
+              <input type="date" name="salida" id="salida" min="14-03-2025">
+            </p>
+          </fieldset>
+          <fieldset>
+            <legend>Datos de contacto</legend>
+            <p class="campos">
+              <label>Nombre</label>
+              <input type="text" name="nombre" id="nombre" placeholder="María José">
+            </p>
+            <p class="campos">
+              <label>Email</label>
+              <input type="mail" name="correo" id="correo" placeholder="nombre@correo.com">
+            </p>
+          </fieldset>
+          <p class="botones">
+            <button class="btn">Enviar</button>
+            <button class="btn btn-reset">Limpiar</button>
+          </p>
+        </form>
+      </section>
+    </dialog>
+  </main>
+
+  <footer>
+    <address>
+      <p>Arousa Mar &#9784; Club Nautico</p>
+      <p>Puerto deportivo.</p>
+      <p>Vilanova de Arousa &middot; Pontevedra &middot; 36620</p>
+      <p>Teléfono: (+34) 986 561 420</p>
+      <p>Email: arousamar@arousamar.es</p>
+    </address>
+    <div class="separador"></div>
+    <p>2025 &copy; Marina Vega Vázquez</p>
+    <div class="separador"></div>
+    <!--redes-->
+    <a href=""><img src="./assets/img/logos/logo-X.svg" class="icono"></a>
+    <a href=""><img src="./assets/img/logos/logo-facebook.svg" class="icono"></a>
+    <a><img src="./assets/img/logos/logo-youtube.svg" class="icono" alt=""></a>
+    <a href=""><img src="./assets/img/logos/logo-instagram.svg" class="icono" alt=""></a>
+  </footer>
+
+</body>
+
+</html>
