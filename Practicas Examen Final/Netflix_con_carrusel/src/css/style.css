@@ -15,10 +15,10 @@
 img{
     object-fit: cover;
     width: 100%;
-    height: 100%;
 }
 
 body{
+    min-height: 100vh;
     font-family: var(--fuente-primaria);
     color: white;
     background-color: black;
@@ -32,40 +32,46 @@ body{
 =============================================*/
 
 header{
+    padding: .5rem 1rem;
     background-color: black;
-    color: white;
     display: flex;
-    gap: 1rem;
+    justify-content: space-between;
+    align-items: center;
+    gap: 4rem;
+    min-width: 100vw;
 }
 
 header a{
     text-decoration: none;
     color: white;
+    font-weight: 600;
 }
 
 .header_logo{
-    width: 12%;
+    max-width: 100px;
 }
 
 header nav svg{
-    max-width: 4vw;
-    max-height: 4vh;
+    max-width: 30px;
+    max-height: 30px;
     fill: white; 
-    color: white;
-    
 }
 
 .nav{
     width: 100%;
     display: flex;
-    justify-content: flex-end;
-    font-size: 1.2rem;
+    justify-content: center;
+    max-width: 1200px;
 }
 
 .nav__ul{
+    flex: 1;
+    flex-wrap: wrap;
+    justify-items: flex-end;
     display: flex;
-    gap: 2.5rem;
-    align-self: flex-end;
+    justify-content: space-evenly;
+    align-self: center;
+    gap: 1rem;
 }
 
 .nav__ul li:first-of-type{
@@ -89,7 +95,127 @@ main{
     flex: 1;
 }
 
+.slider{
+    max-width: 560px;
+    min-height: 360px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.slider__container{
+    width: max-content;
+    display: flex;
+    position: absolute;
+    flex-direction: row;
+    animation: slide 20s steps(5) infinite;
+    animation-play-state: running;
+    left: 0%;
+}
+
+.slider__container figure{
+    position: relative;
+}
+
+.slider__container figcaption{
+    position: absolute;
+    top: 8rem;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 2rem;
+}
+
+.lista{
+    display: grid;
+    grid-template-rows: repeat(auto, 1fr);
+    color: white;
+    width: 90vw;
+    margin: 0 auto;
+    padding-bottom: 2rem;
+}
+
+.lista__galeria{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+.lista__galeria li{
+    list-style: none;
+}
+
 /*=====  End of Estilos del main  ======*/
+
+
+/*=============================================
+=            Estilos del footer            =
+=============================================*/
+
+footer{
+    display: flex;
+    justify-content: center;
+}
+
+/*=====  End of Estilos del footer  ======*/
+
+
+/*=============================================
+=            Animaciones            =
+=============================================*/
+
+.slider__pause{
+    opacity: 0;
+}
+
+.slider__pause, .slider__label{
+    display: flex;
+    order: 1;
+    position: absolute;
+    bottom: 0%;
+    z-index: 100;
+}
+
+.slider__pause + label::before{
+    content: "\270b";
+}
+
+.slider__pause:checked ~label::before{
+    content: "\21bb";
+}
+
+.slider__pause:checked ~ .slider__container{
+    animation-play-state: paused;
+}
+
+@keyframes slide {
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(-100%);
+    }
+}
+
+/*=====  End of Animaciones  ======*/
+
+
+
+
+
+
+/*=============================================
+=            Media queries            =
+=============================================*/
+
+
+@media screen and (min-width: 720px) {
+    
+}
+
+/*=====  End of Media queries  ======*/
 
 
 

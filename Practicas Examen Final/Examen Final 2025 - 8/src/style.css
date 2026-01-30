@@ -1,5 +1,6 @@
 @charset "UTF-8";
 @import "fonts.css";
+@import "video.css";
 /* importa las fuentes y el resto de hojas de estilos */
 /*=============================================
 =            Estilos generales            =
@@ -48,6 +49,7 @@ body {
 
 .icono {
   max-width: 30px;
+  list-style: none;
 }
 
 h1, h2, h3, h4 {
@@ -65,6 +67,92 @@ img{
   width: 100%;
   object-fit: cover;
 }
+
+/* h2 tamaño fuente h1 menos 1/4 del tamaño de la fuente de h1*/
+
+/* h3 tamaño fuente h1 menos 1/2 del tamaño de la fuente de h1*/
+
+/* separador es una linea punteada de color --color-secundario empleada solamente en diseño
+móvil (hasta 720px) para separar el contenido del pie. Ver video */
+
+/* los enlaces que no son hijos de un nav tendrán como color de texto color-secundario*/
+/*=====  End of Estilos generales  ======*/
+
+
+/*=============================================
+=            Estilos de la cabecera            =
+=============================================*/
+
+
+header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  max-width: 2560px;
+  padding: 1rem;
+  position: fixed;
+  width: 100vw;
+  background-color: rgba(10, 9, 24, 0.3);
+  
+}
+
+.nav{
+  width: 100%;
+  font-family: var(--fuente-primaria);
+}
+
+.nav__lista{
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.nav__item{
+  list-style: none;
+  line-height: 2px;
+  font-size: 1.7rem;
+}
+
+.nav__item a{
+  text-decoration: none;
+  color: white;
+}
+
+.logo {
+  max-width: 60px;
+}
+
+/* fuente de las obciones del menú 1.7rem, separación entre las letras 2px.*/
+/* Al pasar sobre cada opción del menú aparece una barra de alto 4px. */
+
+/*=====  End of Estilos de la cabecera  ======*/
+
+
+/*=============================================
+=            Estilos del main            =
+=============================================*/
+main {
+  flex: 1;
+  width: 100%;
+  padding-bottom: 4rem;
+}
+
+#nosotros h3 {
+  color: var(--color-secundario-oscuro);
+}
+
+#nosotros video{
+  width: 40vw;
+}
+
+
+/* para todos los h2 del main,
+ que no estén después de un h1 color color-primario y alineado al centro
+*/
+/* tanto #nosotros como #visitas tendrán un padding de 1rem y un áncho máximo
+de 1400px*/
+
 
 
 /*=============================================
@@ -99,98 +187,6 @@ img{
 
 
 
-
-/* h2 tamaño fuente h1 menos 1/4 del tamaño de la fuente de h1*/
-
-/* h3 tamaño fuente h1 menos 1/2 del tamaño de la fuente de h1*/
-
-/* separador es una linea punteada de color --color-secundario empleada solamente en diseño
-móvil (hasta 720px) para separar el contenido del pie. Ver video */
-
-/* los enlaces que no son hijos de un nav tendrán como color de texto color-secundario*/
-/*=====  End of Estilos generales  ======*/
-
-
-/*=============================================
-=            Estilos de la cabecera            =
-=============================================*/
-
-.header{
-  background-color: black;
-  opacity: .5;
-}
-
-header {
-  max-width: 2560px;
-  padding: 0 1rem;
-}
-
-.nav{
-  display: flex;
-  width: 100%;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.nav__lista{
-  display: flex;
-  gap: 1rem;
-  align-items: center;
-}
-
-.nav__item{
-  list-style: none;
-  line-height: 2px;
-  font-size: 1.7rem;
-}
-
-.nav__item a{
-  text-decoration: none;
-  color: white;
-}
-
-.logo {
-  max-width: 100px;
-}
-
-/* fuente de las obciones del menú 1.7rem, separación entre las letras 2px.*/
-/* Al pasar sobre cada opción del menú aparece una barra de alto 4px. */
-
-/*=====  End of Estilos de la cabecera  ======*/
-
-
-/*=============================================
-=            Estilos del main            =
-=============================================*/
-main {
-  flex: 1;
-  width: 100%;
-  padding-bottom: 4rem;
-}
-
-#nosotros h3 {
-  color: var(--color-secundario-oscuro);
-}
-
-Copy
-/* para todos los h2 del main,
- que no estén después de un h1 color color-primario y alineado al centro
-*/
-/* tanto #nosotros como #visitas tendrán un padding de 1rem y un áncho máximo
-de 1400px*/
-
-
-
-/*=============================================
-=            Estilos ventana modal            =
-=============================================*/
-
-
-
-/*=====  End of Estilos ventana modal  ======*/
-
-
-
 /*=============================================
 =            Estilos de la portada            =
 =============================================*/
@@ -202,10 +198,11 @@ Fuente del texto 1.2rem
 El texto de la portada ocupará como máximo el 90% del contenedor para móvi y dede
 720px el 70%*/
 
-#portada {
+.portada {
   height: 939px;
-  background: linear-gradient(rgba(11, 10, 31, 0.712), rgba(11, 10, 31, 0.726));
+  background: linear-gradient(rgba(11, 10, 31, 0.712), rgba(11, 10, 31, 0.726)), url(../assets/img/puertodeportivo-vilanova.jpg);
 }
+
 
 
 /*=====  End of Estilos de la portada  ======*/
@@ -247,7 +244,39 @@ El texto de la portada ocupará como máximo el 90% del contenedor para móvi y 
    Boton 1.5rem transparente.
    */
 
+.servicios{
+  background: url(../assets/img/puertodeportivo-vilanova-home.jpg);
+}
 
+.servicios h2{
+  font-size: var(--size-h1);
+  text-align: center;
+}
+
+.cards{
+  max-width: 1400px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 370px));
+  margin: 0 auto;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.card{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  border: solid 3px transparent;
+  box-shadow: 4px 4px 10px;
+  background-color: white;
+}
+
+.card:hover{
+  border: solid 3px var(--color-secundario);
+}
 
 
 /*=====  End of Estilos del main  ======*/
@@ -266,10 +295,37 @@ El texto de la portada ocupará como máximo el 90% del contenedor para móvi y 
 /* SOLO PARA MOVIL, tiene que aparecer antes de cada li salvo el primero
 el ancla (anchor.svg). Tiene unas dimensiones de 2x2 rem */
 
+#visitantes{
+  display: flex;
+  flex-direction: column;
+}
 
+#visitantes ul{
+  display: flex;
+  gap: 2rem;
+  text-align: center;
+}
 
+.sub-info{
+  letter-spacing: 3px;
+  font-weight: 600;
+  color: var(--color-secundario-oscuro);
+}
 
+#visitantes li{
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+}
 
+#visitantes h2{
+  font-size: var(--size-h1);
+  align-self: center;
+}
+
+#visitantes li span:first-of-type {
+  font-size: 2rem;
+}
 
 /*=============================================
 =            Estilos del footer            =
@@ -277,6 +333,18 @@ el ancla (anchor.svg). Tiene unas dimensiones de 2x2 rem */
 footer {
   background-color: var(--color-fondo-2);
   padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  color: white;
+}
+
+footer ul{
+  display: flex;
+  justify-content: center;
+}
+
+footer ul li {
+  width: 100%;
 }
 
 
