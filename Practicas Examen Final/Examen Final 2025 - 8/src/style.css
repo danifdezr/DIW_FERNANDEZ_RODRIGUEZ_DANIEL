@@ -48,7 +48,7 @@ body {
 }
 
 .icono {
-  max-width: 30px;
+  max-width: 80px;
   list-style: none;
 }
 
@@ -138,15 +138,6 @@ main {
   padding-bottom: 4rem;
 }
 
-#nosotros h3 {
-  color: var(--color-secundario-oscuro);
-}
-
-#nosotros video{
-  width: 40vw;
-}
-
-
 /* para todos los h2 del main,
  que no estén después de un h1 color color-primario y alineado al centro
 */
@@ -176,11 +167,43 @@ de 1400px*/
   padding: 1rem;
 }
 
+.campos{
+  padding: .5rem;
+}
+
 .btn__close{
   align-self: center;
   position: fixed;
   top: 1rem;
   right: 1rem;
+  border: none;
+  background: transparent;
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: var(--color-secundario-oscuro);
+}
+
+.botones{
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+#reserva .btn{  
+  font-size: 15px;
+  padding: .5rem;
+  border: solid 0px black;
+  box-shadow: 4px 4px 3px black;
+  background-color: black;
+  color: var(--color-secundario);
+  text-transform: uppercase;
+  width: 6rem;
+  height: 2.3rem;
+}
+
+#reserva .btn-reset{
+  background-color: orangered;
+  color: white;
 }
 
 /*=====  End of Estilos ventana modal  ======*/
@@ -225,7 +248,17 @@ El texto de la portada ocupará como máximo el 90% del contenedor para móvi y 
   gap: .5rem;
 }
 
+#nosotros h3 {
+  color: var(--color-secundario-oscuro);
+}
 
+#nosotros video{
+  width: 40vw;
+}
+
+#transcripcion{
+  text-align: center;
+}
 
 /*=============================================
 =            Estilos de las cards            =
@@ -268,10 +301,23 @@ El texto de la portada ocupará como máximo el 90% del contenedor para móvi y 
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  text-align: center;
   padding: 2rem;
+  gap: 1rem;
   border: solid 3px transparent;
   box-shadow: 4px 4px 10px;
   background-color: white;
+  font-size: 22px;
+}
+
+
+
+.card .btn{
+  padding: 1rem;
+  border: solid 1px var(--color-secundario);
+  background: transparent;
+  text-transform: uppercase;
+  font-size: 15px;
 }
 
 .card:hover{
@@ -335,12 +381,15 @@ footer {
   padding: 1rem;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   color: white;
 }
 
 footer ul{
   display: flex;
   justify-content: center;
+  align-items: center;
+  gap: 1rem;
 }
 
 footer ul li {
