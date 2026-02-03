@@ -93,7 +93,8 @@ header {
   position: fixed;
   width: 100vw;
   background-color: rgba(10, 9, 24, 0.3);
-  
+  flex-wrap: wrap;
+  gap: 1rem;
 }
 
 .nav{
@@ -103,24 +104,50 @@ header {
 
 .nav__lista{
   display: flex;
-  gap: 2rem;
+  gap: 1rem;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 .nav__item{
   list-style: none;
   line-height: 2px;
-  font-size: 1.7rem;
+  font-size: 2rem;
+  padding: 2.2rem;  
+}
+
+
+.nav__item:nth-of-type(4) a{
+  font-weight: bold;
+}
+
+.logo {
+  max-width: 60px;
+  min-width: 30px;
 }
 
 .nav__item a{
   text-decoration: none;
   color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
 }
 
-.logo {
-  max-width: 60px;
+.nav__item a::after{
+  content: "";
+  width: 0;
+  height: 4px;
+  background-color: transparent;
+  transition: all .5s ease-in-out;
+}
+.nav__item a:hover::after{
+  width: 100%;
+  background-color: white;
+  border-bottom: 3px solid white;
 }
 
 /* fuente de las obciones del menú 1.7rem, separación entre las letras 2px.*/
@@ -222,8 +249,31 @@ El texto de la portada ocupará como máximo el 90% del contenedor para móvi y 
 720px el 70%*/
 
 .portada {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 1rem;
   height: 939px;
   background: linear-gradient(rgba(11, 10, 31, 0.712), rgba(11, 10, 31, 0.726)), url(../assets/img/puertodeportivo-vilanova.jpg);
+  color: white;
+}
+
+.portada h2, .portada h3, .portada p{
+  width: 60%;
+}
+
+.portada h2{
+  font-size: 3rem;
+}
+
+.portada h3{
+  font-size: 2rem;
+}
+
+.portada p{
+  font-size: 1.2rem;
 }
 
 
@@ -395,8 +445,9 @@ footer ul{
 footer ul li {
   width: 100%;
 }
-
-
+address a{
+  color: var(--color-secundario);
+}
 
 /*=====  End of Estilos del footer  ======*/
 
@@ -405,5 +456,31 @@ footer ul li {
 =            Media Queries            =
 =============================================*/
 /* Para pantallas desde 720px. Fuente 16px tamaño h1 4rem */
+
+@media screen and (min-width:720px) {
+  
+  :root{
+    font-size: 16px;
+  }
+
+  h1{
+    font-size: 4rem;
+  }
+
+  header{
+    flex-wrap: nowrap;
+  }
+
+  .nav__lista{
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+  }
+
+  .nav__item{
+    font-size: 1.7rem;
+  }
+
+  
+}
 
 /*=====  End of Media Queries  ======*/

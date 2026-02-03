@@ -112,15 +112,15 @@
             <legend>Datos del Barco</legend>
             <p class="campos">
               <label>Nombre</label>
-              <input type="text" name="barco" id="barco">
+              <input type="text" name="barco" id="barco" required pattern="[a-zA-ZáéíóúÁÉÍÓÚ\-]{3, 15}">
             </p>
             <p class="campos">
               <label>Eslora (m)</label>
-              <input type="number" name="eslora" id="eslora" min="2.5" max="16.0" step="0.1" value="6.0">
+              <input type="number" name="eslora" id="eslora" min="2.5" max="16.0" step="0.1" value="6.0" required>
             </p>
             <p class="campos">
               <label>Manga (m)</label>
-              <input type="number" name="manga" id="manga" min="1.5" max="6" step="0.1" value="2.0">
+              <input type="number" name="manga" id="manga" min="1.5" max="6" step="0.1" value="2.0" required>
             </p>
           </fieldset>
           <fieldset>
@@ -159,8 +159,8 @@
       <p>Arousa Mar &#9784; Club Nautico</p>
       <p>Puerto deportivo.</p>
       <p>Vilanova de Arousa &middot; Pontevedra &middot; 36620</p>
-      <p>Teléfono: (+34) 986 561 420</p>
-      <p>Email: arousamar@arousamar.es</p>
+      <p>Teléfono: <a href="tel">(+34) 986 561 420</a></p>
+      <p>Email: <a href="mail">arousamar@arousamar.es</a></p>
     </address>
     <div class="separador"></div>
     <p>2025 &copy; Marina Vega Vázquez</p>
