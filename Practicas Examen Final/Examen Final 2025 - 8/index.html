@@ -9,22 +9,20 @@
 </head>
 
 <body>
-  <div class="header">
     <header>
       <h1>Hola Vilanova</h1>
-      <a href="#" class="logo">
-        <img src="./assets/img/logo.png" alt="Logo enlace página principal">
+      <a href="#" class="logo" aria-label="Enlace a la página principal">
+        <img src="./assets/img/logo.png" alt="Arousa Mar8">
       </a>
       <nav class="nav">
         <ul class="nav__lista">
-          <li class="nav__item"><a href="#">Nosotros</a></li>
+          <li class="nav__item"><a href="#nosotros">Nosotros</a></li>
           <li class="nav__item"><a href="#">Servicios</a></li>
           <li class="nav__item"><a href="#">Contactos</a></li>
           <li class="nav__item"><a href="#" onclick="window.reserva.showModal()">Reservas</a></li>
         </ul>
       </nav>
     </header>
-  </div>
 
   <main class="main">
     <section class="portada">
@@ -42,7 +40,7 @@
       <h2>Arousa Mar</h2>
       <h3>42º 33´ 97´´ N - 08º 49´ 99´´ W</h3>
       <!--video-->
-      <video width="320" height="240" controls poster="./assets/img/mapaCopia.png">
+      <video width="320" height="240" controls poster="./assets/img/mapaCopia.png" aria-describedby="transcripcion">
         <source src="./assets/videos/Puerto_deportivo.mp4" type="video/mp4">
         <track src="./assets/videos/subtitulos_es.vtt" kind="subtitles" srclang="es" label="Español" default>
       </video>
