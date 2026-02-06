@@ -1,0 +1,31 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Move Trailer</title>
+  <link rel="stylesheet" href="./src/css/style.css">
+  <script src="./src/js/app.js" defer></script>
+</head>
+
+<body class="container">
+  <div class="container__img">
+    <img src="assets/img/play.png" class="btn">
+  </div>
+
+  <div class="container__trailer active">
+    <video controls>
+      <source src="assets/videos/trailer.mp4" type="video/mp4">
+      <track src="./assets/videos/Caption-en.vtt" kind="captions" label="Caption" srclang="en" default>
+      <track src="./assets/videos/Subtitulos-es.vtt" kind="subtitles" label="Subtitulos" srclang="es">
+      <p><em>Su navegador no soporta HTML 5.</em> Puede descargar el video en
+        el siguiente <a href="./assets/videos/trailer.mp4"> enlace</a>.</p>
+      </track>
+    </video>
+    <p class="close-icon">X</p>
+  </div>
+
+</body>
+
+</html>

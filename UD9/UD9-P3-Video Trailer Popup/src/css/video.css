@@ -1,0 +1,25 @@
+/*=============================================
+=            Estilos generales para los subtítulos            =
+=============================================*/
+
+::cue{
+    font: 1.4rem sans-serif;
+    background-color: rgba(0, 0, 0, 0.774);
+}
+
+::cue(.titulo){
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: rgba(83, 83, 83, 0.582);
+    
+}
+
+::cue(.desc){
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: yellow;
+    color: black;
+}
+
+::cue(v[voice=narrador]){
+    color: var(--color-primario);
+    font-size: 1.6rem;
+}
