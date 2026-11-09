@@ -1,11 +1,10 @@
 /*
-   New Perspectives on HTML5 and CSS3, 7th Edition
-   Tutorial 1
-   Tutorial Case
-   Filename: base.css
+   Diseño de Interfaces Web
+   Unidad 2
+   Repaso de HTML 5 y XSS3
+   Nombre fichero: ct_base.css
 
-   This file contains the base styles used by all pages in the website
-
+   Este documento contiene los estilos básicos del sitio web
 */
 
 
@@ -40,6 +39,10 @@ body {
 }
 
 
+.sr-only{
+  position: absolute;
+  top: -200vh;
+}
 /* =============================================
 	Hypertext links
    =============================================

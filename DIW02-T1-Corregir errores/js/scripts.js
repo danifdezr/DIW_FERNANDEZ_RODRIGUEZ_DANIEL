@@ -1,39 +1,108 @@
-$("#obtener-random").on('click', function() {
-  $('#random').html(Math.random());
-});
 
-$('#titulo-desplegable').on('click', function() {
+// ------------------------------------
+// CONTROL RANGE
+// ------------------------------------
 
-    var panel = $('#desplegable');
-    panel.toggleClass('visible');
-    panel.toggleClass('hidden');
+const intervalo = document.getElementById("intervalo");
+const valorIntervalo = document.getElementById("valor-intervalo");
 
-    if (panel.hasClass('visible')) {
-        $(this).html("Cierrame");
-    } else {
-        $(this).html("Despliegame");
-    }
+intervalo.addEventListener("input", () => {
+  valorIntervalo.value = intervalo.value;
 });
 
 
-$('#tab1').on('click', function() {
+// ------------------------------------
+// GENERADOR DE NÚMEROS ALEATORIOS
+// ------------------------------------
 
-    activar($('#tab1'), $('#tab2'), $('#section1'), $('#section2'));
+$("#obtener-random").on("click", function () {
+  $("#random").text(Math.random());
 });
 
-$('#tab2').on('click', function() {
 
-    activar($('#tab2'), $('#tab1'), $('#section2'), $('#section1'));
+// ------------------------------------
+// DESPLEGABLE
+// ------------------------------------
+
+$("#titulo-desplegable").on("click", function () {
+  const panel = document.getElementById("desplegable");
+  const estaAbierto = !panel.hidden;
+
+  panel.hidden = estaAbierto;
+
+  this.setAttribute("aria-expanded", String(!estaAbierto));
+
+  this.textContent = estaAbierto
+    ? "Despliega la información"
+    : "Oculta la información";
 });
 
-function activar(tabActivada, tabDesactivada, panelActivado, panelDesactivada) {
 
-      tabActivada.addClass('selected')
-      tabDesactivada.removeClass('selected');
+// ------------------------------------
+// PESTAÑAS (TABS)
+// ------------------------------------
 
-      panelActivado.addClass('visible');
-      panelActivado.removeClass('hidden');
+const tabs = $("#tab1, #tab2");
+const paneles = $("#section1, #section2");
 
-      panelDesactivada.addClass('hidden');
-      panelDesactivada.removeClass('visible');
+function activar(indice) {
+  const tabActiva = tabs.eq(indice);
+  const tabInactiva = tabs.eq(1 - indice);
+
+  const panelActivo = paneles.eq(indice);
+  const panelInactivo = paneles.eq(1 - indice);
+
+  // Actualizar pestañas
+  tabActiva
+    .addClass("selected")
+    .attr("aria-selected", "true")
+    .attr("tabindex", "0");
+
+  tabInactiva
+    .removeClass("selected")
+    .attr("aria-selected", "false")
+    .attr("tabindex", "-1");
+
+  // Actualizar paneles
+  panelActivo.prop("hidden", false);
+  panelInactivo.prop("hidden", true);
+
+  // Actualizar foco
+  tabActiva.trigger("focus");
 }
+
+// Activación mediante ratón
+tabs.on("click", function (e) {
+  e.preventDefault();
+  activar(tabs.index(this));
+});
+
+// Navegación mediante teclado
+tabs.on("keydown", function (e) {
+  const indiceActual = tabs.index(this);
+  let nuevoIndice = indiceActual;
+
+  switch (e.key) {
+    case "ArrowRight":
+      nuevoIndice = (indiceActual + 1) % tabs.length;
+      break;
+
+    case "ArrowLeft":
+      nuevoIndice = (indiceActual - 1 + tabs.length) % tabs.length;
+      break;
+
+    case "Home":
+      nuevoIndice = 0;
+      break;
+
+    case "End":
+      nuevoIndice = tabs.length - 1;
+      break;
+
+    default:
+      return;
+  }
+
+  e.preventDefault();
+  activar(nuevoIndice);
+});

@@ -1,18 +1,18 @@
 @charset "utf-8";
 /*
-   New Perspectives on HTML5 and CSS3, 7th Edition
-   Tutorial 1
-   Tutorial Case
-   Filename: ct_layout1.css
+   Diseño de Interfaces Web
+   Unidad 2
+   Repaso de HTML 5 y XSS3
+   Nombre fichero: ct_layout1.css
 
-   This file contains the layout styles used in the ct_start.html page.
+   Este archivo contiene los estilos de diseño utilizados en la página ct_start.html.
 
 */
 
 /* =============================================
-	Base layout styles used by mobile devices
-	up to 480px and cascaded to larger devices 
-	unless superceded by other styles.
+	Estilos de diseño base utilizados por los dispositivos móviles
+	hasta 480px y en cascada para dispositivos más grandes 
+	a menos que sean reemplazados por otros estilos.
    =============================================
 */
 
@@ -33,7 +33,7 @@ header img {
 
 body {
 	margin-left: auto;
-	margin-right: auto;
+	margin-right: auto; 
 	width: 81.9%;
 	padding-left: 4.55%;
 	padding-right: 4.55%;
